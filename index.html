@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Henlo</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+    body {
+	text-align: center;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<p></p>
+<div class="container">
+ <div class="col-12">
+  <h3>Willkommen! You have reached the personal page of</h3>
+  <h1>Billy (Yichi) Zhang</h1>
+  <img src="/photo.jpg", style="width:20%; height:20%;">
+  <h3>Why not click around the links below if you are a nice person and not a spammer?</h3>
+  <div class="row">
+   <div class="col-4">
+    <a href="https://github.com/mcer4294967296">My GitHub</a>
+   </div>
+   <div class="col-4">
+    <a href="/resume.pdf">My resumé</a>
+   </div>
+   <div class="col-4">
+    <a href="https://t.me/mcer4294967296">My Telegram</a>
+   </div>
+  </div>
+  <p>
+   <img src="/nyancat.gif">
+  </p>
+  <p>
+   <button class="btn btn-primary" onclick="addCount()">Smash the button!</button> You have pressed it <span id="count">0</span> time(s) already.
+  </p>
+ </div>
+</div>
+
+<script>
+function addCount() {
+ document.getElementById("count").innerHTML = parseInt(document.getElementById("count").innerHTML) + 1;
+}
+</script>
+
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
