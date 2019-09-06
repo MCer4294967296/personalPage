@@ -5,43 +5,136 @@
 <title>Henlo</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <style>
-    body {
+ body {
 	text-align: center;
-        font-family: Helvetica, Arial, sans-serif;
-    }
+ font-family: Helvetica, Arial, sans-serif;
+}
 </style>
 </head>
 <body>
 <p></p>
-<div class="container">
- <div class="col-12">
-  <h3>Willkommen! You have reached the personal page of</h3>
-  <h1>Billy (Yichi) Zhang</h1>
-  <img src="/photo.jpg", style="width:20%; height:20%;">
-  <h3>Why not click around the links below if you are a nice person and not a spammer?</h3>
-  <div class="row">
-   <div class="col-4">
-    <a href="https://github.com/mcer4294967296">My GitHub</a>
-   </div>
-   <div class="col-4">
-    <a href="/resume.pdf">My resumé</a>
-   </div>
-   <div class="col-4">
-    <a href="https://t.me/mcer4294967296">My Telegram</a>
-   </div>
+<div class="container-fluid">
+ <div class="row">
+  <div class="col-3" style="text-align: left;">
+   <h4>About me</h4>
+   <p>I'm a junior student pursuing a B.A in computer science at UC Berkeley.</p>
+   <p>
+    I come from China. China is cool. The United States is cool. Everything is cool. But what's especially cool is
+    <a href="/noodles.html">noodles</a> from my hometown Suzhou. Ramen is good enough for me though.
+   </p>
+   <p>
+    I love to play the piano in my leisure time and I play nearly nothing other than classical music.
+    I also love listening to classical piano music because symphonies alike are still lullabies for me.
+   </p>
+   <p>
+    I like Japanese culture. The few <a href="omamori.html">omamori</a> I owned brought me what they promised. I also love how they treat life
+    as if it doesn't really matter. That's both depressing and inspiring. I wish I can live like that.
+   </p>
+   <p>
+    I prefer tea to coffee. After trail and failure for almost 8 years, I have convinced myself that coffee is just not my thing.
+    The fact that it contains bitterness is undefeatable - not even with a lot of milk and sugar and honey and chocolate and tea.
+    As a result I now drink coffee only when I need some human battery, and I only drink espresso because
+    <span style="color: #ff7b00" title="A single acute pain is better than chronical and smooth pain.">长痛不如短痛</span> (<- hover to see translation).
+   </p>
+   <p>
+    I also play video games. I entered Monster Hunter last year and I love it very much. Second to that is Overwatch, which is a <i>dead game</i>.
+    Apart from these two, most of the games I play happens with another friend, and the game is just a means to fortify bond between me and my friends.
+    StarCraft 2, Overcooked 2, Civilization 5 & 6.
+   </p>
+   <p>
+    I explore myself in unexpected ways. I have been trying to restrain my drinking of water, which became kind of beneficial when I was travelling in Egypt - 
+    although it is very hot and dry, since I drink less than others, I bring less water.
+    I also tried not to eat for days: it was not successful and I could not resist my hunger during the 36th hour.
+   </p>
+   <p>
+    I use Arch Linux! 
+    <blockquote class="blockquote">
+      <p>Tonight, we celebrate, by pacman -Syu. Tomorrow, we pacman -Syu.</p>
+      <footer class="blockquote-footer">Billy Zhang</footer>
+    </blockquote>
+   </p>
   </div>
-  <p>
-   <img src="/nyancat.gif">
-  </p>
-  <p>
-   <button class="btn btn-primary" onclick="addCount()">Smash the button!</button> You have pressed it <span id="count">0</span> time(s) already.
-  </p>
+  <div class="col-7">
+   <h3>Willkommen! You have reached the personal page of</h3>
+   <h1>Billy (Yichi) Zhang</h1>
+   <div class="row">
+    <div class="col-1"></div>
+    <div class="col-4">
+     My various (possibly uninteresting) accounts:
+     <table class="table">
+      <thead>
+       <tr>
+         <th scope="col">Platform</th>
+         <th scope="col">Identifier</th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+        <th scope="row">Battle.net</th>
+        <td>MCer65535 (hashtag) 1652</td>
+       </tr>
+       <tr>
+        <th scope="row">Steam</th>
+        <td><a href="steamcommunity.com/profiles/76561198249134902/">MCer4294967296</a></td>
+       </tr>
+       <tr>
+        <th scope="row">Wechat</th>
+        <td>zyc65535</td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+    <div class="col-4"><img src="/photo.jpg" style="height:320px"></div>
+    <div class="col-3"></div>
+   </div>
+   <p></p>
+   <h3>Why not click around the links below if you are a nice person and not a spammer?</h3>
+   <div class="row">
+    <div class="col-4">
+     <a href="https://github.com/mcer4294967296">My GitHub</a>
+    </div>
+    <div class="col-4">
+     <a href="/resume.pdf">My resumé</a>
+    </div>
+    <div class="col-4">
+     <a href="https://t.me/mcer4294967296">My Telegram</a>
+    </div>
+   </div>
+   <p>
+    <img src="/nyancat.gif" id="nyan" onclick="nyanClick()">
+   </p>
+   <p>
+    <button class="btn btn-primary" onclick="buttonClick()">Smash the button!</button> You have pressed it <span id="count">0</span> time(s) already.
+   </p>
+   <p style="visibility:hidden" id="hint">
+    Fun fact: if you click the nyan cat for 10 times you will also get something.
+   </p>
+  </div>
+  <div class="col-2" style="text-align: right;">
+    <h4>About you</h4>
+    <p>You are cool.</p>
+    <p>Very likely to be at least as cool as I am.</p>
+    <p>But also possibly not. Very Few people drop in this category though.</p>
+    <p>Do you want to chat with me? I welcome random English and Chinese speakers on telegram.</p>
+    <p>Do you want to play with me? I am plat on Overwatch; I love long swords on Monster Hunter World </p>
+   </div>
  </div>
 </div>
 
 <script>
-function addCount() {
- document.getElementById("count").innerHTML = parseInt(document.getElementById("count").innerHTML) + 1;
+function buttonClick() {
+ count = parseInt(document.getElementById("count").innerHTML);
+ document.getElementById("count").innerHTML = count + 1;
+ if (count + 1 >= 5) {
+  document.getElementById("hint").style.visibility="visible";
+ }
+}
+var nyanCount = 0;
+function nyanClick() {
+ nyanCount++;
+ if (nyanCount >= 10) {
+  window.open("http://www.nyan.cat/");
+ }
 }
 </script>
 
